@@ -14,7 +14,7 @@ import action.BestSellerAction;
 import action.CartInsertAction;
 import action.ItemDeleteProAction;
 import action.ItemModifyFormAction;
-import action.ItemModifyProAction;
+import action.ItemModifyproAction;
 import action.ItemRecentAction;
 import action.ItemRegisterProAction;
 import action.ItemSingleAction;
@@ -118,7 +118,7 @@ public class ItemFrontController extends HttpServlet {
 		} else if (command.equals("/itemModifyPro.em")) { // 아이템 수정 Pro
 //			System.out.println("itemModifyPro");
 			
-			action = (Action) new ItemModifyProAction();
+			action = (Action) new ItemModifyproAction();
 			
 			try {
 				forward = action.execute(request, response);
