@@ -47,7 +47,8 @@
 	    	background-color: #C49B63 !important;
 	    	color: black !important; }
 	    .team-member{
-	    	margin:0 0 50px 50px;}
+	    	margin: auto !important;
+	    	display: inline-block;}
 	    	
 	    .col-md-12 mb-3 .p{
 	    font-color:#fed136;
@@ -109,87 +110,66 @@
                 <h3 class="section-subheading text-muted">Café TinkerVell 을 만든 사람들</h3>
             </div>
         </div>
-        <div class="row">
-            <div class="col-sm-4 text-center">
-                <div class="team-member">
+        
+        <div class="row" style="text-align: center !important; padding: 10px 0;">
+            
+            <div class="col-sm-4 team-member">
                     <img class="mx-auto rounded-circle" src="./images/moon.jpg" alt="">
                     <h4>문세웅</h4>
                     <p class="text-muted1">Moon SeWoong</p>
                     <p class="text-muted1" style="margin-top: -12px;">Developer</p>
                     <p class="text-muted1" style="margin-top: -21px;">sewoong0409@naver.com</p>
-                    
-                </div>
             </div>
-            <div class="col-sm-4">
-                <div class="team-member">
-                    <img class="mx-auto rounded-circle" src="./images/choi.jpg" alt="">
-                    <h4>최영비</h4>
-                    <p class="text-muted1">Choe YeongBi</p>
-                    <p class="text-muted1" style="margin-top: -12px;">Developer</p>
-                    <p class="text-muted1" style="margin-top: -21px;">cyeongb@gmail.com</p>
-                    
-                </div>
-            </div>
-             <div class="col-sm-4">
-                <div class="team-member">
-                    <img class="mx-auto rounded-circle" src="./images/ji.jpg" alt="">
-                    <h4>지이듬</h4>
-                    <p class="text-muted1">Ji YiDeum</p>
-                    <p class="text-muted1" style="margin-top: -12px;">Developer</p>
-                    <p class="text-muted1" style="margin-top: -21px;">game9um@gmail.com</p>
-                    
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="team-member">
+        
+            <div class="col-sm-4 team-member">
                     <img class="mx-auto rounded-circle" src="./images/shin.jpg" alt="">
                     <h4>신미송</h4>
                     <p class="text-muted1">Shin MiSong</p>
                     <p class="text-muted1" style="margin-top: -12px;">Developer</p>
                     <p class="text-muted1" style="margin-top: -21px;">fhdgofhdgo@naver.com</p>
-                    
-                </div>
             </div>
-            <div class="col-sm-4">
-                <div class="team-member">
-                    <img class="mx-auto rounded-circle" src="./images/kwon.jpg" alt="">
-                    <h4>권경민</h4>
-                    <p class="text-muted1">Kwon KyoungMin</p>
-                    <p class="text-muted1" style="margin-top: -12px;">Developer</p>
-                    <p class="text-muted1" style="margin-top: -21px;">kkmkwon@naver.com</p>
-                  
-                </div>
-            </div>
-             <div class="col-sm-4">
-                <div class="team-member">
+            
+            
+            <div class="col-sm-4 team-member">
                     <img class="mx-auto rounded-circle" src="./images/song.jpg" alt="">
                     <h4>송주영</h4>
                     <p class="text-muted1">Song JuYeong</p>
                     <p class="text-muted1" style="margin-top: -12px;">Developer</p>
                     <p class="text-muted1" style="margin-top: -21px;">saruru1@naver.com</p>
-                    
-                </div>
-       
+            </div>     
+        
+            <div class="col-sm-4 team-member">
+                    <img class="mx-auto rounded-circle" src="./images/ji.jpg" alt="">
+                    <h4>지이듬</h4>
+                    <p class="text-muted1">Ji YiDeum</p>
+                    <p class="text-muted1" style="margin-top: -12px;">Developer</p>
+                    <p class="text-muted1" style="margin-top: -21px;">game9um@gmail.com</p>
             </div>
-            <div class="col-sm-4">
-                <div class="team-member">
+        </div>
+        
+        <div class="row" style="text-align: center !important; padding: 10px 0;">
+            <div class="col-sm-4 team-member">
+                    <img class="mx-auto rounded-circle" src="./images/choi.jpg" alt="">
+                    <h4>최영비</h4>
+                    <p class="text-muted1">Choe YeongBi</p>
+                    <p class="text-muted1" style="margin-top: -12px;">Developer</p>
+                    <p class="text-muted1" style="margin-top: -21px;">cyeongb@gmail.com</p>
+            </div>
+            
+            <div class="col-sm-4 team-member">
                     <img class="mx-auto rounded-circle" src="./images/han.jpg" alt="">
                     <h4>한성민</h4>
                     <p class="text-muted1">Han SungMin</p>
                     <p class="text-muted1" style="margin-top: -12px;">Developer</p>
                     <p class="text-muted1" style="margin-top: -21px;">gkstyd1313@naver.com</p>
-                  
-                </div>
             </div>
-             <div class="col-sm-4">
-                <div class="team-member">
-                    <img class="mx-auto rounded-circle" src="./images/lee.jpg" alt="">
-                    <h4>이기홍</h4>
-                    <p class="text-muted1">Lee KiHong</p>
+
+            <div class="col-sm-4 team-member">
+                    <img class="mx-auto rounded-circle" src="./images/kwon.jpg" alt="">
+                    <h4>권경민</h4>
+                    <p class="text-muted1">Kwon KyoungMin</p>
                     <p class="text-muted1" style="margin-top: -12px;">Developer</p>
-                    <p class="text-muted1" style="margin-top: -21px;">ghlee@imsolutions.co.kr</p>
-                  
-                </div>
+                    <p class="text-muted1" style="margin-top: -21px;">kkmkwon@naver.com</p>
             </div>
           
         </div> 
@@ -253,16 +233,16 @@
 	              <h2 class="h4">Contact Information</h2>
 	            </div>
 	            <div class="col-md-12 mb-3 text-muted1">
-	              <p><span>주소:</span> 부산광역시 부산진구 동천로 109 삼한골든게이트빌딩 7층</p>
+	              <p><span>주소</span><br> 부산광역시 부산진구 동천로 109<br> 삼한골든게이트빌딩 7층</p>
 	            </div>
 	            <div class="col-md-12 mb-3 text-muted1">
-	              <p><span>전화번호:</span> +82 051-803-0909</p>
+	              <p><span>전화번호</span><br> +82 010-7508-9722</p>
 	            </div>
 	            <div class="col-md-12 mb-3 text-muted1">
-	              <p><span>이메일:</span> class@itwillbs.co.kr</p>
+	              <p><span>이메일</span><br> fhdgofhdgo@naver.com</p>
 	            </div>
 	            <div class="col-md-12 mb-3 text-muted1">
-	              <p><span>홈페이지:</span> https://itwillbs.co.kr/</p>
+	              <p><span>블로그</span><br> https://blog.naver.com/fhdgofhdgo</p>
 	            </div>
 						</div>
 					</div>
