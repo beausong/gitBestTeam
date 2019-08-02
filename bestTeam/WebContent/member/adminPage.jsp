@@ -281,29 +281,37 @@ window.onload = function() {
 	</section>
 
 
-	<section class="ftco-menu mb-5 pb-5"  id="go_top">
+	<section class="fmb-5 pb-5"  id="go_top">
 		<div class="containerm8">
 			<div class="row d-md-flex">
 				<div class="col-lg-12 ftco-animate p-md-5">
 
 					<div class="row">
-						<div class="col-md-12 nav-link-wrap mb-5">
+						<div class="col-md-12 nav-link-wrap">
 							<div class="nav ftco-animate nav-pills justify-content-center"
 								id="v-pills-tab" role="tablist" aria-orientation="vertical" style="margin-bottom: 1rem;">
 
-								<a class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3 cart" id="v-pills-0-tab" href="adminPage.us" style="width: 24%; text-align: center; margin-right: 0.5rem;"
+								<a class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3 cart" id="v-pills-0-tab" href="adminPage.us" style="width: 18%; text-align: center; margin-right: 0.5rem;"
 								role="tab" aria-controls="v-pills-0" onmouseover="$('#v-degree-tab').hide()" 
 								onmouseout="if(!$('#v-pills-0-tab').hasClass('active')) $('#v-degree-tab').css('display', '-webkit-box')" aria-selected="true">
 								전체 회원 정보</a> 
-								<a class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3 cart" id="v-pills-1-tab" href="adminPageShop.us" style="width: 24%; text-align: center; margin-right: 0.5rem;"
+								
+								<a class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3 cart" id="v-pills-1-tab" href="adminPageShop.us" style="width: 18%; text-align: center; margin-right: 0.5rem;"
 								onmouseover="if($('#v-pills-0-tab').hasClass('active')) $('#v-degree-tab').css('display', '-webkit-box')" 
 								onmouseout="if($('#v-pills-0-tab').hasClass('active')) $('#v-degree-tab').hide()" aria-controls="v-pills-1" aria-selected="false">
 								전체 상품 정보</a>
-								<a class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3 cart" id="v-pills-1-tab" href="blogWriteForm.bl" style="width: 24%; text-align: center; margin-right: 0.5rem;"
+								
+								<a class="btn btn-primary btn-outline-primary p-3 px-xl-4 py-xl-3 cart" id="v-pills-1-tab" href="itemRegister.em" style="width: 18%; text-align: center; margin-right: 0.5rem; font-weight: bold;"
+								onmouseover="if($('#v-pills-0-tab').hasClass('active')) $('#v-degree-tab').css('display', '-webkit-box')" 
+								onmouseout="if($('#v-pills-0-tab').hasClass('active')) $('#v-degree-tab').hide()" aria-controls="v-pills-1" aria-selected="false">
+								상품 등록</a>
+								
+								<a class="btn btn-primary btn-outline-primary p-3 px-xl-4 py-xl-3 cart" id="v-pills-1-tab" href="blogWriteForm.bl" style="width: 18%; text-align: center; margin-right: 0.5rem; font-weight: bold;"
 								onmouseover="if($('#v-pills-0-tab').hasClass('active')) $('#v-degree-tab').css('display', '-webkit-box')" 
 								onmouseout="if($('#v-pills-0-tab').hasClass('active')) $('#v-degree-tab').hide()" aria-controls="v-pills-1" aria-selected="false">
 								blog 글 작성</a>
-								<a class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3 cart" id="v-pills-1-tab" href="noticeWriteForm.no" style="width: 24%; text-align: center; margin-right: 0.5rem;"
+								
+								<a class="btn btn-primary btn-outline-primary p-3 px-xl-4 py-xl-3 cart" id="v-pills-1-tab" href="noticeWriteForm.no" style="width: 18%; text-align: center; margin-right: 0.5rem; font-weight: bold;"
 								onmouseover="if($('#v-pills-0-tab').hasClass('active')) $('#v-degree-tab').css('display', '-webkit-box')" 
 								onmouseout="if($('#v-pills-0-tab').hasClass('active')) $('#v-degree-tab').hide()" aria-controls="v-pills-1" aria-selected="false">
 								notice 글 작성</a>
@@ -314,19 +322,71 @@ window.onload = function() {
 						<div class="col-md-12 d-flex align-items-center">
 
 							<div class="tab-content ftco-animate" id="v-pills-tabContent" style="width: 100%;">
-
-								<div class="tab-pane fade show active" id="v-pills-0"
-									role="tabpanel" aria-labelledby="v-pills-0-tab">
+	     
+								<div class="tab-pane fade show active" id="v-pills-0" role="tabpanel" aria-labelledby="v-pills-0-tab">
+								
+								
+	<!-- 그래프 1~4 -->
+	<div class="billing-form ftco-bg-dark p-3 p-md-5" >
+			<h3 class="mb-4 billing-heading" style="text-align: center;">회원 정보 통계</h3>
+		<!-- 그래프 1,3 -->	          
+	       <div class="row d-flex" >
+	       <!-- 연령별 전체 회원 분포  그래프1-->
+	         	<div class="col-md-6 d-flex">
+	          		<div class="cart-detail cart-total p-3 p-md-4">
+	          			<h3 class="billing-heading mb-4">연령별 회원 분포</h3>
+	          			<div id="chartContainer" style="height: 370px; width: 100%;"></div>
+					</div>
+	         	</div>
+          <!-- 연령별 전체 회원 분포 끝 -->
+          <!-- 연령별 구매 수량  그래프3-->
+	         	<div class="col-md-6 d-flex">
+	          		<div class="cart-detail cart-total ftco-bg-dark p-3 p-md-4">
+	          			<h3 class="billing-heading mb-4">연령별 구매 수량</h3>
+	          			<div id="chartContainer3" style="height: 370px; width: 100%;"></div>
+					</div>
+	          	</div>
+          <!-- 연령별 구매 수량 끝 -->
+	       </div>
+        <!-- 그래프 1,3 끝 -->	
+	    
+	    <!-- 그래프 2,4 -->	   
+	       <div class="row d-flex" >
+	      <!-- 성별 전체 회원 분포 그래프2 -->
+	          	<div class="col-md-6 d-flex">
+	          		<div class="cart-detail cart-total ftco-bg-dark p-3 p-md-4">
+	          			<h3 class="billing-heading mb-4">성별 회원 분포</h3>
+	          			<div id="chartContainer2" style="height: 370px; width: 100%;"></div>
+					</div>
+	          	</div>
+	       <!-- 성별 전체 회원 분포 끝 -->
+	      <!-- 성별 구매 수량 그래프4 -->
+	          	<div class="col-md-6 d-flex">
+	          		<div class="cart-detail cart-total ftco-bg-dark p-3 p-md-4">
+	          			<h3 class="billing-heading mb-4">성별 취향 정보</h3>
+	          			<div id="chartContainer4" style="height: 370px; width: 100%;"></div>
+					</div>
+	          	</div>
+	       <!-- 성별 구매 수량 끝 -->
+	       </div>
+	    <!-- 그래프 2,4 끝 -->	      	
+								
+	</div>			
+	<!-- 그래프 1~4 끝 -->
+	
+	<br><br>
+	
 
 		<!-- 리스트 -->
+		
 		<form class="billing-form ftco-bg-dark p-3 p-md-7895" style="overflow: auto;">
-			<h3 class="mb-4 billing-heading" style="text-align: center;">전체 리스트</h3>
+			<h3 class="mb-4 billing-heading" style="text-align: center;">회원 리스트</h3> <br>
 			
 			 <div class="cart-list">
 
               <table class="table">
                 <thead class="thead-primary">
-                  <tr class="text-center">
+                  <tr class="text-center"">
                     <th>No</th>
                     <th>ID</th>
                     <th>이름</th>
@@ -391,74 +451,26 @@ window.onload = function() {
 				</div>
 			</div>
 		<!-- 리스트 끝 -->
-		<br><br>
-		
-	          
-	      <!-- 연령별 전체 회원 분포  그래프1-->
-	       <div class="row mt-5 pt-3 d-flex" >
-	          
-	         <div class="col-md-6 d-flex">
-	          		<div class="cart-detail cart-total ftco-bg-dark p-3 p-md-4">
-	          			<h3 class="billing-heading mb-4">연령별 전체 회원 분포</h3>
-	          				<div id="chartContainer" style="height: 370px; width: 100%;"></div>
-					</div>
-	          	</div>
-          <!-- 연령별 전체 회원 분포 끝 -->
-	      <!-- 성별 전체 회원 분포 그래프2 -->
-	          	<div class="col-md-6 d-flex">
-	          		<div class="cart-detail cart-total ftco-bg-dark p-3 p-md-4">
-	          			<h3 class="billing-heading mb-4">성별 전체 회원 분포</h3>
-	          				<div id="chartContainer2" style="height: 370px; width: 100%;"></div>
-					</div>
-	          	</div>
-	       <!-- 성별 전체 회원 분포 끝 -->
-	       
-	            </div>
-          </div> 
-	       
-	       <!-- 연령별 구매 수량  그래프3-->
-	       <div class="row mt-5 pt-3 d-flex" >
-	          
-	         <div class="col-md-6 d-flex">
-	          		<div class="cart-detail cart-total ftco-bg-dark p-3 p-md-4">
-	          			<h3 class="billing-heading mb-4">연령별 구매 수량</h3>
-	          				<div id="chartContainer3" style="height: 370px; width: 100%;"></div>
-					</div>
-	          	</div>
-          <!-- 연령별 구매 수량 끝 -->
-	      <!-- 성별 구매 수량 그래프4 -->
-	          	<div class="col-md-6 d-flex">
-	          		<div class="cart-detail cart-total ftco-bg-dark p-3 p-md-4">
-	          			<h3 class="billing-heading mb-4">성별 취향 정보</h3>
-	          				<div id="chartContainer4" style="height: 370px; width: 100%;"></div>
-					</div>
-	          	</div>
-	       <!-- 성별 구매 수량 끝 -->
-	          	
-	     
 
-
-								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+		</div>
+		</div>
 	</section>
 
 	<footer class="ftco-footer ftco-section img">
 		<jsp:include page="../inc/footer.jsp"></jsp:include>
 	</footer>
 
-
-
 	<!-- loader -->
 	<div id="ftco-loader" class="show fullscreen">
 		<svg class="circular" width="48px" height="48px">
-			<circle class="path-bg" cx="24" cy="24" r="22" fill="none"
-				stroke-width="4" stroke="#eeeeee" />
-			<circle class="path" cx="24" cy="24" r="22" fill="none"
-				stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" /></svg>
+			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" />
+		</svg>
 	</div>
 
 

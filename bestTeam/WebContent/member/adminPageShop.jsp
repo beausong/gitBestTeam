@@ -6,7 +6,7 @@
 <html lang="en">
 <head>
 
-<title>Admin Page ─ Cafe Tinkervell</title>
+<title>Admin Page ─ Cafe TinkerVell</title>
 <meta charset="utf-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -61,9 +61,9 @@
 		<%
 	}
 %>
-<style type="text/css">
-	.blk { background-color: black; }
-</style>
+	<style type="text/css">
+		.blk { background-color: black; }
+	</style>
 </head>
 <body>
 	<header>
@@ -100,19 +100,27 @@
 							<div class="nav ftco-animate nav-pills justify-content-center"
 								id="v-pills-tab" role="tablist" aria-orientation="vertical" style="margin-bottom: 1rem;">
 
-								<a class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3 cart" id="v-pills-0-tab" href="adminPage.us" style="width: 24%; text-align: center; margin-right: 0.5rem;"
+								<a class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3 cart" id="v-pills-0-tab" href="adminPage.us" style="width: 18%; text-align: center; margin-right: 0.5rem;"
 								role="tab" aria-controls="v-pills-0" onmouseover="$('#v-degree-tab').hide()" 
 								onmouseout="if(!$('#v-pills-0-tab').hasClass('active')) $('#v-degree-tab').css('display', '-webkit-box')" aria-selected="true">
 								전체 회원 정보</a> 
-								<a class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3 cart" id="v-pills-1-tab" href="adminPageShop.us" style="width: 24%; text-align: center; margin-right: 0.5rem;"
+								
+								<a class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3 cart" id="v-pills-1-tab" href="adminPageShop.us" style="width: 18%; text-align: center; margin-right: 0.5rem;"
 								onmouseover="if($('#v-pills-0-tab').hasClass('active')) $('#v-degree-tab').css('display', '-webkit-box')" 
 								onmouseout="if($('#v-pills-0-tab').hasClass('active')) $('#v-degree-tab').hide()" aria-controls="v-pills-1" aria-selected="false">
 								전체 상품 정보</a>
-								<a class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3 cart" id="v-pills-1-tab" href="blogWriteForm.bl" style="width: 24%; text-align: center; margin-right: 0.5rem;"
+								
+								<a class="btn btn-primary btn-outline-primary p-3 px-xl-4 py-xl-3 cart" id="v-pills-1-tab" href="itemRegister.em" style="width: 18%; text-align: center; margin-right: 0.5rem; font-weight: bold;"
+								onmouseover="if($('#v-pills-0-tab').hasClass('active')) $('#v-degree-tab').css('display', '-webkit-box')" 
+								onmouseout="if($('#v-pills-0-tab').hasClass('active')) $('#v-degree-tab').hide()" aria-controls="v-pills-1" aria-selected="false">
+								상품 등록</a>
+								
+								<a class="btn btn-primary btn-outline-primary p-3 px-xl-4 py-xl-3 cart" id="v-pills-1-tab" href="blogWriteForm.bl" style="width: 18%; text-align: center; margin-right: 0.5rem; font-weight: bold;"
 								onmouseover="if($('#v-pills-0-tab').hasClass('active')) $('#v-degree-tab').css('display', '-webkit-box')" 
 								onmouseout="if($('#v-pills-0-tab').hasClass('active')) $('#v-degree-tab').hide()" aria-controls="v-pills-1" aria-selected="false">
 								blog 글 작성</a>
-								<a class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3 cart" id="v-pills-1-tab" href="noticeWriteForm.no" style="width: 24%; text-align: center; margin-right: 0.5rem;"
+								
+								<a class="btn btn-primary btn-outline-primary p-3 px-xl-4 py-xl-3 cart" id="v-pills-1-tab" href="noticeWriteForm.no" style="width: 18%; text-align: center; margin-right: 0.5rem; font-weight: bold;"
 								onmouseover="if($('#v-pills-0-tab').hasClass('active')) $('#v-degree-tab').css('display', '-webkit-box')" 
 								onmouseout="if($('#v-pills-0-tab').hasClass('active')) $('#v-degree-tab').hide()" aria-controls="v-pills-1" aria-selected="false">
 								notice 글 작성</a>
@@ -140,8 +148,6 @@
 				</nav>
 				<iframe id="if01" name="ifbox01" width="100%" src="adminPageShopDay.us?month=<%=Calendar.getInstance().get(Calendar.MONTH)+1 %>" height="500px" style="margin: auto; border: 0px;">
 				</iframe>
-				<a class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3 cart"  href="itemRegister.em" style="font-weight: bold; width:99%; margin: 0;"
-					role="tab" aria-controls="v-pills-3" aria-selected="false">상품 등록</a>
     		</div>
     		
     		<h3 class="mb-4 billing-heading" style="padding-top: 3rem;">상품 목록</h3>

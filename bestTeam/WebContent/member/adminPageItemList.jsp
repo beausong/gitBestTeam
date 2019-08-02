@@ -18,12 +18,7 @@
 	int maxPage = pageInfo.getMaxPage();
 	int startPage = pageInfo.getStartPage();
 	int endPage = pageInfo.getEndPage();
-	//	System.out.println("listCount : " + listCount);
-// 	System.out.println("nowPage : " + nowPage);
-// 	System.out.println("maxPage : " + maxPage);
-// 	System.out.println("startPage : " + startPage);
-// 	System.out.println("endPage : " + endPage);
-// 		System.out.println("itemList.size() ::: " + itemList.size());
+
 	
 %>
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
@@ -75,8 +70,6 @@
 				
 				for (var i = 0; i < <%=itemList.size()%> ; i++) {
 					if ($('.cb' + i).is(":checked") == true) {
-// 						alert('1 :: ' + $('.cb' + i).val());
-// 						alert('2 :: ' + $('.cbf' + i).val());
 						list1.push($('.cb' + i).val());
 						list2.push($('.cbf' + i).val());
 					}
@@ -85,9 +78,6 @@
 
 				list1 = list1 + ""; // Object를 String으로 변환
 				list2 = list2 + "";
-				
-// 				alert(list1);
-// 				alert(list2);
 				
 				if (list1 != "" && list2 != "") {
 					$.ajax({
@@ -118,7 +108,7 @@
 	});
 </script>
 
-<title>Admin Page ─ Cafe Tinkervell</title>
+<title>Admin Page ─ Cafe TinkerVell</title>
 <style type="text/css">
 	.trtd>td {
 		padding: 10px 0 !important;
@@ -126,16 +116,12 @@
 </style>
 </head>
 <body style="background: transparent;">
-<!-- 	<secion> -->
-<!-- 	<div class="container"> -->
-<!-- 		<div class="row"> -->
-<!-- 			<div class="col-md-12 ftco-animate"> -->
+
 				<div class="cart-list">
 					<table class="table">
 						<thead class="thead-primary">
 							<tr class="text-center">
-								<th><input class="checkDelete" type="checkbox"
-									id="checkAll"></th>
+								<th><input class="checkDelete" type="checkbox" id="checkAll"></th>
 								<th>번호</th>
 								<th>사진</th>
 								<th>상품명</th>
@@ -149,7 +135,6 @@
                 	if (itemList != null) {
                 		if (itemList.size() != 0) {
 	                		for (int i = 0 ; i < itemList.size() ; i++) { 
-// 	                			System.out.println("Item_favor_num() :: " + itemList.get(i).getItem_favor_num());
 	                		%>
 							<tr class="text-center trtd">
 								<td class="product-remove">
@@ -157,17 +142,16 @@
 									<input type="hidden" value="<%=itemList.get(i).getItem_favor_num() %>" class="cbf<%=i %>">
 								</td>
 								<td class="product-num"><a><%=i+1 %></a></td>
-								<td class="image-prod"><a target="_blank"
-									href="itemSingle.em?item_num=<%=itemList.get(i).getItem_num() %>">
-										<div class="img"
-											style="background-image:url(./itemUpload/<%=itemList.get(i).getItem_img() %>);"></div>
+								<td class="image-prod"><a target="_blank" href="itemSingle.em?item_num=<%=itemList.get(i).getItem_num() %>">
+										<div class="img" style="background-image:url(./itemUpload/<%=itemList.get(i).getItem_img() %>);"></div>
 								</a></td>
 								<td class="product-name"><a target="_blank"
-									href="itemSingle.em?item_num=<%=itemList.get(i).getItem_num() %>"><h3><span style="color: red;"><%=itemList.get(i).getItem_amount() == 0 ? "[품절]" : "" %></span><%=itemList.get(i).getItem_name() %></h3></a>
+									href="itemSingle.em?item_num=<%=itemList.get(i).getItem_num() %>">
+									<h3><span style="color: red;"><%=itemList.get(i).getItem_amount() == 0 ? "[품절]" : "" %></span>
+										<%=itemList.get(i).getItem_name() %></h3></a>
 								</td>
 
-								<td class="price"><%=NumberFormat.getInstance().format(itemList.get(i).getItem_price()) %>
-									원</td>
+								<td class="price"><%=NumberFormat.getInstance().format(itemList.get(i).getItem_price()) %> 원</td>
 								<td class="price"> <%=itemList.get(i).getItem_amount() %>
 								</td>
 
