@@ -93,9 +93,9 @@ opacity:0.77;
 				<%
 					if (session.getAttribute("id") == null) {
 				%>
+				<li class="nav-item"><a href="join.us" class="nav-link">SignUp</a></li>
 				<li class="nav-item"><a href="#login-box"
 					class="login-window nav-link">Login</a></li>
-				<li class="nav-item"><a href="join.us" class="nav-link">SignUp</a></li>
 				<%
 					} else {
 				%>

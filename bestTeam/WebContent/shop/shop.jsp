@@ -13,12 +13,8 @@
 	int startPage = pageInfo.getStartPage();
 	int endPage = pageInfo.getEndPage();
 	String id = (String)session.getAttribute("id");
-// 	System.out.println("listCount : " + listCount);
-// 	System.out.println("nowPage : " + nowPage);
-// 	System.out.println("maxPage : " + maxPage);
-// 	System.out.println("startPage : " + startPage);
-// 	System.out.println("endPage : " + endPage);
-// 	System.out.println("itemList.size() : " + itemList.size());
+	
+
 %>
 <!DOCTYPE html>
 <head>
@@ -74,26 +70,24 @@
 	.shop-subcategory>.col-md-3>.menu-entry {
 		margin: 0;
 	}
-/* 	.shop-subcategory>.text { */
-/* 		display: inline-grid; */
-/* 	} */
 	
-/* 	#v-pills-1-tab:hover { */
-/* 		border: 1px solid red; */
+	.roundbox {
+		width: 50px;
+		text-align: center;
+		display: inline-block;
+	}
 		
-/* 	} */
-/* 	#v-pills-2-tab { */
-/* 		border: 1px solid blue; */
-/* 	} */
-/* 	#v-pills-3-tab { */
-/* 		border: 1px solid green; */
-/* 	} */
-/* 	#v-pills-4-tab { */
-/* 		border: 1px solid blue; */
-/* 	} */
-/* 	#v-pills-5-tab { */
-/* 		border: 1px solid white; */
-/* 	} */
+	.roundbox a {
+		text-transform: uppercase;
+		display: inline-block;
+		width: 35px;
+		padding: 4px 10px;
+		margin-bottom: 7px;
+		border-radius: 4px;
+		color: #b3b3b3;
+		border: 1px solid #674c27;
+		font-size: 14px; }
+
 </style>
 
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
@@ -221,64 +215,12 @@
 	</header>
 	<!-- END nav -->
 
-<!-- 	<section class="home-slider owl-carousel"> -->
-
-<!-- 		<div class="slider-item" -->
-<!-- 			style="background-image: url(./images/bg_3.jpg);" > -->
-<!-- 			<div class="overlay"></div> -->
-<!-- 			<div class="container"> -->
-<!-- 				<div -->
-<!-- 					class="row slider-text justify-content-center align-items-center"> -->
-
-<!-- 					<div class="col-md-7 col-sm-12 text-center ftco-animate"> -->
-<!-- 						<h1 class="mb-3 mt-5 bread">Order Online</h1> -->
-<!-- 						<p class="breadcrumbs"> -->
-<!-- 							<span class="mr-2"><a href="./index.jsp">Home</a></span> <span>Shop</span> -->
-<!-- 						</p> -->
-<!-- 					</div> -->
-
-<!-- 				</div> -->
-<!-- 			</div> -->
-<!-- 		</div> -->
-	</section>
 
 
 	<section class="ftco-menu mb-5 pb-5"  id="go_top" style="margin-bottom: 0;">
 		<div class="container">
 			<div class="row d-md-flex">
-			
-			<!-- 우측 퀵메뉴 -->
-<!-- 	<div class="quick"> -->
-<!-- 		<a href="javascript:void(0)" class="tablink" onclick="openPage('Home', this)" id="defaultOpen"><img alt="recent" src="./images/g_con_1_2.png"></a> -->
-<!-- 		<a href="javascript:void(0)" class="tablink" onclick="openPage('News', this)"><img alt="pick" src="./images/g_con_2_1.png"></a> -->
-<!-- 		<a href="./shop/cart.jsp" class="tablink"><img alt="cart" src="./images/g_con_3_1.png"></a> -->
 
-<!-- 			<div id="Home" class="tabcontent"> -->
-<!-- 				<h6>RECENTLY</h6> -->
-<!-- 			  <a href="./shop/product-single.jsp"><img alt="" src="./images/menu-1.jpg"></a> -->
-<!-- 			</div> -->
-			
-<!-- 			<div id="News" class="tabcontent"> -->
-<!-- 			  <h6>Pick</h6> -->
-<!-- 			  <a href="./shop/product-single.jsp"><img alt="" src="./images/menu-2.jpg"></a> -->
-<!-- 			</div> -->
-			
-<!-- 			<div class="quick_mid">  -->
-<!-- 				<ul class="sec_m"> -->
-<!-- 					<li><img alt="prev" src="./images/g_con_prev.png"></li> -->
-<!-- 					<li>1 / 1</li> -->
-<!-- 					<li><img alt="next" src="./images/g_con_next.png"></li> -->
-<!-- 				</ul> -->
-<!-- 			</div>  -->
-<!-- 		<div class="quick_bottom"> -->
-<!-- 			<ul> -->
-<!-- 				<li><a href="javascript:void(0)" onclick="history.go(-1)"><img alt="back" src="./images/back.png"></a></li> -->
-<!-- 				<li><a href="#go_top"><img alt="top" src="./images/up_btn.png"></a></li> -->
-<!-- 				<li><a href="#go_bottom"><img alt="bottom" src="./images/down_btn.png"></a></li> -->
-<!-- 			</ul> -->
-<!-- 		</div> -->
-<!-- 	</div> -->
-			<!-- 우측 퀵메뉴 끝 -->
 			
 			
 				<div class="col-md-7 heading-section ftco-animate text-center" style="margin: 0 auto; margin-top: 31px;">
@@ -322,7 +264,7 @@
 									role="tab" aria-controls="v-pills-3" aria-selected="false">묵직함</a>
 							<% if(id != null && id.equals("admin")) { %>
 								<a class="nav-link" id="v-pills-5-tab" href="itemRegister.em"
-									role="tab" aria-controls="v-pills-3" aria-selected="false">상품등록</a>
+									role="tab" aria-controls="v-pills-3" aria-selected="false" style="color: white !important;">상품등록</a>
 							<% } %>
 							</div>
 							

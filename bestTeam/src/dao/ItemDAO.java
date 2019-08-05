@@ -95,7 +95,6 @@ public class ItemDAO {
 			int startRow = (page - 1) * 8;
 			pstmt.setInt(1, startRow);
 			pstmt.setInt(2, limit);
-//			System.out.println("sql : " + sql);
 			rs = pstmt.executeQuery();
 			while (rs.next()) {
 				itemBean = new ItemBean();
@@ -116,9 +115,8 @@ public class ItemDAO {
 				itemBean.setItem_favor_num(rs.getInt("item_favor_num"));
 				itemList.add(itemBean);
 
+				System.out.println(itemBean.getItem_img());
 			}
-//			System.out.println("itemList.size() :: " + itemList.size());
-//			System.out.println("selectItemList 성공!");
 
 		} catch (SQLException e) {
 			System.out.println("selectItemList 실패! ( " + e.getMessage() + " )");

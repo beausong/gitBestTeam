@@ -39,28 +39,15 @@ public class ShopMainAction implements Action {
 		// 리스트 개수
 		ShopMainService shopMainService = new ShopMainService();
 		int listCount = shopMainService.getListCount(taste, degree);
-	//	System.out.println("listCount : " + listCount);
 
 
 		// 총 리스트 받아옴
 		itemList = shopMainService.getItemList(page, limit, taste, filter, degree);
 		
-//		System.out.println("page : " + page);
-//		System.out.println("limit : " + limit);
-//		System.out.println("taste : " + taste);
-//		System.out.println("filter : " + filter);
-//		System.out.println("degree : " + degree);
-//		System.out.println("itemList.size() : " + itemList.size());
-
 		int maxPage = (listCount / limit) + 1;
 		if (listCount % limit == 0) maxPage--;
-//		int maxPage = (int)((double)listCount / limit+0.95);
 		int startPage = (((int)((double)page / 10 + 0.9)) - 1) * 10 + 1;
 		int endPage = startPage + limit - 1;
-		
-//		System.out.println("startPage :::: " + startPage);
-//		System.out.println("maxPage :::: " + maxPage);
-//		System.out.println("endPage :::: " + endPage);
 		
 		
 		if (endPage > maxPage) endPage = maxPage;

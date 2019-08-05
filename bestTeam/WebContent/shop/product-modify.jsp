@@ -123,36 +123,6 @@
 	</header>
 	<!-- END nav -->
 
-<!-- 	<section class="home-slider owl-carousel"> -->
- 
-<!-- 		<div class="slider-item" -->
-<!-- 			style="background-image: url(./images/bg_3.jpg);" -->
-<!-- 			data-stellar-background-ratio="0.5"> -->
-<!-- 			<div class="overlay"></div> -->
-<!-- 			<div class="container"> -->
-<!-- 				<div -->
-<!-- 					class="row slider-text justify-content-center align-items-center"> -->
-
-<!-- 					<div class="col-md-7 col-sm-12 text-center ftco-animate"> -->
-<!-- 						<h1 class="mb-3 mt-5 bread">상품정보 수정</h1> -->
-<!-- 						<p class="breadcrumbs"> -->
-<!-- 							<span class="mr-2"><a href="index.in">Home</a></span> <a href="shop.in"><span>Shop</span></a> -->
-<!-- 						</p> -->
-<!-- 					</div> -->
-
-
-<!-- 				</div> -->
-<!-- 			</div> -->
-<!-- 		</div> -->
-<!-- 	</section> -->
-
-<!-- 	<section> -->
-<!-- 		<form action=""> -->
-		
-<!-- 		</form> -->
-	
-<!-- 	</section> -->
-
 
 	<section class="ftco-section" style="margin-top: 100px; margin-bottom: 100px;">
 		<div class="container">
@@ -177,8 +147,8 @@
 					</tr>
 					<tr>
 						<td>간단 설명 : </td>
-						<td><textarea rows="10" cols="30" id="item_info" name="item_info"  value="<%=itemBean.getItem_info()%>"
-								style="width: 100%; height: 200px;"  required="required"></textarea></td>
+						<td><textarea rows="10" cols="30" id="item_info" name="item_info" style="width: 100%; height: 200px;"
+						required="required"><%=itemBean.getItem_info()%></textarea></td>
 					</tr>
 					<tr>
 						<td>재고 : </td>
@@ -242,12 +212,13 @@
 <!-- 					</tr> -->
 				</table>
 				<br><br>
-				
-				<p style="text-align: right;">
+				<div style="float: left; width: 33%;">				
 					<input type="reset" class="btn btn-primary py-3 px-4" style="color: black;" id="reset" value="다시쓰기" />
+				</div>
+				<div style="float: right; text-align: right; width: 66%;">	
 					<input type="submit"  class="btn btn-primary py-3 px-4" style="color: black;" id="save" value="수정하기" /> 
 					<input type="button" class="btn btn-primary py-3 px-4" style="color: black;" id="delete" value="삭제하기" onclick="location.href='./itemDeleteForm.em?item_num=<%=itemBean.getItem_num()%>&item_favor_num=<%=itemBean.getItem_favor_num() %>'"/>
-				</p>
+				</div>
 			</form>
 		</div>
 	</section>

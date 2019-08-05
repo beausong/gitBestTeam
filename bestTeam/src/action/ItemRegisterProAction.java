@@ -47,24 +47,34 @@ public class ItemRegisterProAction implements Action {
 		
 		ItemBean itemBean = null;
 		
-		String saveFolder = "/itemUpload"; // 톰캣(이클립스) 상의 가상의 경로
-		String realFolder; // 실제 경로
-		int fileSize = 5 * 1024 * 1024; // 파일 사이즈(5MB)
+		// 톰캣(이클립스) 상의 가상의 경로
+		String saveFolder = "/itemUpload"; 
+
+		// 실제 경로 : 파일이 저장될 서버의 경로 
+		// ex) String realFolder = "D:/Projects/workspace/projectName/WebContent/itemUpload";
+		String realFolder = request.getServletContext().getRealPath(saveFolder); 
+//		String realFolder; // 실제 경로
+//		ServletContext context = request.getServletContext();
+//		realFolder = context.getRealPath(saveFolder);
 		
+		// 파일 사이즈 (5MB = 5 * 1024 * 1024)
+		int fileSize = 5 * 1024 * 1024; 
 		
-		ServletContext context = request.getServletContext();
-		realFolder = context.getRealPath(saveFolder);
-		Path newDirectory = Paths.get(realFolder);
-        
-        try {
-            Path createDirResult = Files.createDirectories(newDirectory);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//		Path newDirectory = Paths.get(realFolder);
+//        
+//        try {
+//            Path createDirResult = Files.createDirectories(newDirectory);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
 		
-	//	System.out.println(realFolder);
-		
+
+		// MultipartRequest multi = new MultipartRequest(request 객체, 저장될 서버 경로, 파일 최대 크기, 인코딩 방식, 같은 이름의 파일명 방지 처리)
 		MultipartRequest multi = new MultipartRequest(request, realFolder, fileSize, "UTF-8", new DefaultFileRenamePolicy());
+
+		
+		//--- 데이터 DB 저장 ---//
+		
 		Enumeration files = multi.getFileNames();
 		
 		String file = (String)files.nextElement();
@@ -73,8 +83,6 @@ public class ItemRegisterProAction implements Action {
 		String file2 = (String)files.nextElement();
 		String filename2 = multi.getFilesystemName(file2);
 		
-		
-	    
 		itemBean = new ItemBean();
 		
 		itemBean.setItem_name(multi.getParameter("item_name"));

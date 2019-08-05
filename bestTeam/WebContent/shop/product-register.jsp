@@ -62,18 +62,7 @@ pageEncoding="UTF-8"%>
  		width: 85px; 
  		text-align-last: center;
 	}
-/* 	#tbl1 #favor td { */
-/* 		display: inline-block; */
-/* 		margin-top: 30px; */
-/* 		margin: 0 10px; */
-/* 	} */
-/* 	#tbl1 #favor tr { */
-/* 		display: inline-block; */
-/* 	} */
-/* 	#tbl1 #favor select { */
-/* 		width: 85px; */
-/* 		text-align-last: center;  */
-/* 	} */
+
 
 </style>
 </head>
@@ -103,8 +92,7 @@ pageEncoding="UTF-8"%>
 					</tr>
 					<tr>
 						<td>간단 설명 : </td>
-						<td><textarea rows="10" cols="30" name="item_info" 
-								style="width: 100%; height: 200px;" ></textarea></td>
+						<td><textarea rows="10" cols="30" name="item_info" style="width: 100%; height: 200px;" ></textarea></td>
 					</tr>
 					<tr>
 						<td>재고 : </td>
